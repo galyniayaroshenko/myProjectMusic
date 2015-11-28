@@ -1,0 +1,46 @@
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.performer">All performer</a> | <a ui-sref="base.newPerformer">Add performer</a>
+              </div>
+              <div class="large-9 left category"> Performer</div>
+          </div>
+          </div>
+        </div>
+<form role="form" ng-submit="editPerformer()">
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Title performer
+        <input type="text" ng-model="performer.title" ng-value='onePerformer.performer.title'  name="" id="title" placeholder="Performer Title Here"></input>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+  <div class="row">
+    <div class="large-6 columns">
+      <label>Pick img performer
+        <input type="file" size="30"  ngf-select ng-model="picFileImg" name="fileimg"
+accept="*" ngf-max-size="100MB">
+      </label>
+    </div>
+  </div>
+    <a role="button" class="button" ng-click="updatePerformer(picFileImg)" value="Save">Save</a>
+    <a role="button" href="" class="button">Reset</a>
+  </div>
+  {{picFileImg.name}}
+                  <i ng-show="myForm.file.$error.maxSize">File too large
+                    {{picFileImg.size / 100000000|number:2}}MB: max 2M</i>
+
+
+
+                    <div class="progress small-# large-# secondary alert success radius round" ng-show="picFileImg.progress >= 0">
+                      <span align="center" class="meter" style="width:{{picFileImg.progress}}%; background: green; color:#ffffff" ng-bind="picFileImg.progress + '%'"></span>
+                    </div>
+
+                    <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+  </p>
+</form>
+        </section>

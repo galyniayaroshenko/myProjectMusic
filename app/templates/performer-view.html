@@ -1,0 +1,27 @@
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.performer">All performer</a> | <a ui-sref="base.newPerformer">Add performer</a>
+              </div>
+              <div class="large-9 left category"> Performer</div>
+          </div>
+          </div>
+        </div>
+<div class="row">
+          <div class="large-12 column ">
+            <h3>Details for {{viewPerformer.performer.title}}</h3>
+            <div class="row">
+              <div class="large-8 right  panel" >
+                <div>Performer Title</div>
+              </div>
+              <div class="large-4 left category panel">
+                <div>{{viewPerformer.performer.title}}</div>
+              </div>
+          </div>
+          <a role="button" class="button " ui-sref="base.editPerformer({id:viewPerformer.performer._id})" >Edit</a>
+        </div>
+</div>
+</section>

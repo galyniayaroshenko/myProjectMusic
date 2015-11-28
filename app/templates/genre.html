@@ -1,0 +1,22 @@
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.genre">All genre</a> | <a ui-sref="base.newGenre">Add genre</a>
+              </div>
+              <div class="large-9 left category"> Genre</div>
+          </div>
+          </div>
+        </div>
+<div class="row">
+          <div class="large-3 medium-4 small-6 columns" ng-repeat="genre in genreList.genre">
+            <img class="img-content" ng-src="images/genre/{{genre.img}}">
+            <div class="panel">
+              <h5>{{genre.title}}</h5>
+              <a ui-sref="base.viewGenre({id:genre._id})" class="subheader ">View</a> | <a ng-click="deleteGenre({id:genre._id})" class="subheader">Delete</a>
+            </div>
+          </div>
+</div>
+</section>

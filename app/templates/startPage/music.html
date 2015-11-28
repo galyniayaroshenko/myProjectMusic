@@ -1,0 +1,22 @@
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.index">All music</a> | <a ui-sref="base.newMusic">Add music</a>
+              </div>
+              <div class="large-9 left category"> Music</div>
+          </div>
+          </div>
+        </div>
+<div class="row">
+          <div class="large-3 medium-4 small-6 columns" ng-repeat="musics in musicList.music">
+            <img class="img-content" ng-src="images/music/{{musics.img}}">
+            <div class="panel">
+              <h5>{{musics.title}}</h5>
+              <a ui-sref="base.viewMusic({id:musics._id})" class="subheader ">View</a> | <a ng-click="deleteMusic({id:musics._id})" class="subheader">Delete</a>
+            </div>
+          </div>
+</div>
+</section>

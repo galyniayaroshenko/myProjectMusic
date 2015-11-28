@@ -1,0 +1,52 @@
+
+  <nav class="tab-bar" data-topbar >
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+      </section>
+
+      <section class="middle tab-bar-section">
+        <h1 class="title">Adminka</h1>
+      </section>
+
+      <section class="top-bar-section">
+          <ul class="right">
+            <li class="photo-avatar">
+              <img id="photo-avatar" src="https://scontent-waw1-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/11951754_474236086090221_1040259607680958282_n.jpg?oh=ed624aa3d3dbb3ab976afcffe0460e3b&oe=56EB84E1">
+            </li>
+
+            <li>
+              <a ui-sref="base.profile({id:viewProf._id})">{{viewProf.name}}</a>
+            </li>
+            <li accesskey="logout">
+              <a ng-click='signout()' href="">X</a>
+            </li>
+          </ul>
+        </section>
+    </nav>
+
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Settings Database</label></li>
+        <li class="has-submenu"><a ui-sref="base.index">Review Music</a>
+            <ul class="left-submenu">
+                <li class="back"><a href="#">Back</a></li>
+                <li><a ui-sref="base.newMusic">Add music</a></li>
+                <!-- <li><a href="#"></a></li> -->
+                <!-- <li class="has-submenu"><a href="#">Link 2 w/ submenu</a>
+                    <ul class="left-submenu">
+                        <li class="back"><a href="#">Back</a></li>
+                        <li><label>Level 2</label></li>
+                        <li><a href="#">...</a></li>
+                    </ul>
+                </li> -->
+                <li><a href="#">...</a></li>
+            </ul>
+        </li>
+        <li><a ui-sref="base.genre">Review genre</a></li>
+        <li><a ui-sref="base.performer">Review performer</a></li>
+        <li><a ui-sref="base.albums">Review albums</a></li>
+        <li><a ui-sref="base.viewAllProfile">CRUD user</a></li>
+
+
+      </ul>
+    </aside>

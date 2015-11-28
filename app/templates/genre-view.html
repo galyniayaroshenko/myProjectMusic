@@ -1,0 +1,28 @@
+
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.genre">All genre</a> | <a ui-sref="base.newGenre">Add genre</a>
+              </div>
+              <div class="large-9 left category"> Genre</div>
+          </div>
+          </div>
+        </div>
+<div class="row">
+          <div class="large-12 column ">
+            <h3>Details for {{viewGenre.genre.title}}</h3>
+            <div class="row">
+              <div class="large-8 right  panel" >
+                <div>Genre Title</div>
+              </div>
+              <div class="large-4 left category panel">
+                <div>{{viewGenre.genre.title}}</div>
+              </div>
+          </div>
+          <a role="button" class="button " ui-sref="base.editGenre({id:viewGenre.genre._id})" >Edit</a>
+        </div>
+</div>
+</section>

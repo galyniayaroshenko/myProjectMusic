@@ -1,0 +1,22 @@
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.performer">All performer</a> | <a ui-sref="base.newPerformer">Add performer</a>
+              </div>
+              <div class="large-9 left category"> Performer</div>
+          </div>
+          </div>
+        </div>
+<div class="row">
+          <div class="large-3 medium-4 small-6 columns" ng-repeat="performer in performerList.performer">
+            <img class="img-content" ng-src="images/performer/{{performer.img}}">
+            <div class="panel">
+              <h5>{{performer.title}}</h5>
+              <a ui-sref="base.viewPerformer({id:performer._id})" class="subheader ">View</a> | <a ng-click="deletePerformer({id:performer._id})" class="subheader">Delete</a>
+            </div>
+          </div>
+</div>
+</section>

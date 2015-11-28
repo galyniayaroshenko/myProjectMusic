@@ -1,0 +1,23 @@
+
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.albums">All albums</a> | <a ui-sref="base.newAlbums">Add albums</a>
+              </div>
+              <div class="large-9 left category"> Albums</div>
+          </div>
+          </div>
+        </div>
+<div class="row">
+          <div class="large-3 medium-4 small-6 columns" ng-repeat="albums in albumsList.albums">
+            <img class="img-content" ng-src="images/albums/{{albums.img}}">
+            <div class="panel">
+              <h5>{{albums.title}}</h5>
+              <a ui-sref="base.viewAlbums({id:albums._id})" class="subheader ">View</a> | <a ng-click="deleteAlbums({id:albums._id})" class="subheader">Delete</a>
+            </div>
+          </div>
+</div>
+</section>

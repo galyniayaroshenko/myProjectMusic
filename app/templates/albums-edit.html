@@ -1,0 +1,60 @@
+<section class="main-section">
+      <div class="large-12 column panel">
+        <div class="row">
+          <div class="large-12 columdepartments panel ">
+            <div class="row">
+              <div class="large-3 right">
+                <a ui-sref="base.albums">All albums</a> | <a ui-sref="base.newAlbums">Add albums</a>
+              </div>
+              <div class="large-9 left category"> Album</div>
+          </div>
+          </div>
+        </div>
+<form role="form" ng-submit="editAlbums()">
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Title albums
+        <input type="text" ng-model="albums.title" ng-value='oneAlbums.albums.title'  name="" id="title" placeholder="Albums Title Here"></input>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <label class="formname">idPerformer song</label>
+      <select ng-model="albums.performer">
+          <option  ng-repeat="performerListSelect in performerListSelects.performer" value="{{performerListSelect._id}}">{{performerListSelect.title}}</option>
+    </select>
+    </div>
+    <div class="large-6 columns">
+      <label class="formname">IdGenre song</label>
+      <select ng-model="albums.genre">
+          <option  ng-repeat="genreListSelect in genreListSelects.genre" value="{{genreListSelect._id}}">{{genreListSelect.title}}</option>
+    </select>
+    </div>
+  </div>
+  <div class="row">
+  <div class="row">
+    <div class="large-6 columns">
+      <label>Pick img albums
+        <input type="file" size="30"  ngf-select ng-model="picFileImg" name="fileimg"
+accept="*" ngf-max-size="100MB">
+      </label>
+    </div>
+  </div>
+    <a role="button" class="button" ng-click="updateAlbums(picFileImg)" value="Save">Save</a>
+    <a role="button" href="#" class="button">Reset</a>
+  </div>
+  {{picFileImg.name}}
+                  <i ng-show="myForm.file.$error.maxSize">File too large
+                    {{picFileImg.size / 100000000|number:2}}MB: max 2M</i>
+
+
+
+                    <div class="progress small-# large-# secondary alert success radius round" ng-show="picFileImg.progress >= 0">
+                      <span align="center" class="meter" style="width:{{picFileImg.progress}}%; background: green; color:#ffffff" ng-bind="picFileImg.progress + '%'"></span>
+                    </div>
+
+                    <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+  </p>
+</form>
+        </section>
